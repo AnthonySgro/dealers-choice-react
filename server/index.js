@@ -6,6 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Database
+const {
+    db,
+    seed,
+    model: { User, Grocery },
+} = require("./db");
+seed();
 
 // Logging
 app.use(morgan("dev"));

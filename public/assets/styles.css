@@ -1,0 +1,117 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    margin: 0;
+}
+
+body > * {
+    margin: 0;
+}
+
+header > ul {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    margin: 0rem;
+}
+
+ul > * {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#logo {
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+#logo > a {
+    color: black;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+#category-container {
+    width: 100%;
+    background-color: lightgray;
+    padding: 0.2rem 0rem;
+}
+
+#category-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#category-list > li {
+    font-size: medium;
+}
+
+#category-list > li > a {
+    color: black;
+}
+
+#main-body {
+    display: flex;
+    flex-direction: row;
+}
+
+#side-panel {
+    flex: 1;
+    background-color: lightslategrey;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main-view {
+    flex: 4;
+    background-color: lightgoldenrodyellow;
+    width: 100%;
+}
+
+#side-panel-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#side-panel-list > li > a {
+    color: black;
+}
+
+#main-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main-view-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-view-item > img {
+    width: 170px;
+    height: auto;
+}
+
+.main-view-item-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
