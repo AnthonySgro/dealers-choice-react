@@ -1,7 +1,8 @@
 const db = require("./db");
 const User = require("./User");
 const Grocery = require("./Grocery");
-const UserGrocery = require("./UserGrocery");
+const Order = require("./Order");
+const Category = require("./Category");
 const seed = require("./seed");
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
     model: {
         User,
         Grocery,
-        UserGrocery,
+        Order,
+        Category,
     },
 };

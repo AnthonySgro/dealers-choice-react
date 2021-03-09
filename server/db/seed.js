@@ -1,7 +1,7 @@
 const db = require("./db");
 const User = require("./User");
 const Grocery = require("./Grocery");
-const UserGrocery = require("./UserGrocery");
+const UserGrocery = require("./Order");
 const Category = require("./Category");
 
 const seed = async () => {
@@ -72,7 +72,7 @@ const seed = async () => {
             ],
         ];
 
-        const USERGROCERY = [
+        const ORDERS = [
             [1, 1, 1],
             [1, 2, 2],
             [1, 3, 1],
@@ -111,7 +111,7 @@ const seed = async () => {
         );
 
         await Promise.all(
-            USERGROCERY.map((item) => {
+            ORDERS.map((item) => {
                 UserGrocery.create({
                     UserId: item[0],
                     GroceryId: item[1],

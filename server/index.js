@@ -4,13 +4,10 @@ const morgan = require("morgan");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const apiRouter = require("./routes/api");
 
 // Database
-const {
-    db,
-    seed,
-    model: { User, Grocery },
-} = require("./db");
+const { seed } = require("./db");
 seed();
 
 // Logging
@@ -22,6 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Static folder
 app.use(express.static(path.join(__dirname, "../public")));
+
+// Routes
+app.use("/api", apiRouter);
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));

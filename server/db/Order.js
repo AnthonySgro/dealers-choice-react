@@ -1,9 +1,9 @@
 const { Sequelize, DataTypes, Model } = require("sequelize");
 const db = require("./db");
 
-class UserGrocery extends Model {}
+class Order extends Model {}
 
-UserGrocery.init(
+Order.init(
     {
         UserId: {
             type: DataTypes.INTEGER,
@@ -21,8 +21,8 @@ UserGrocery.init(
     {
         timestamps: false,
         sequelize: db,
-        modelName: "UserGrocery",
+        modelName: "Orders",
     },
 );
 
-module.exports = UserGrocery;
+module.exports = Order;
