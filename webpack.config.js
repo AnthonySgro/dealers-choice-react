@@ -1,8 +1,9 @@
 const path = require("path");
 const webpackConfig = {
-    entry: {
-        path: path.join(__dirname, "./src/index.jsx"),
-    },
+    entry: [
+        "regenerator-runtime/runtime",
+        path.join(__dirname, "./src/index.jsx"),
+    ],
     output: {
         path: path.join(__dirname, "./public/bundle"),
         filename: "main.js",
