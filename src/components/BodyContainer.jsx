@@ -4,7 +4,7 @@ import MainPanel from "./MainPanel.jsx";
 
 class BodyContainer extends Component {
     render() {
-        const { categories, changeCategory } = this.props;
+        const { categories, displayedGroceries, changeCategory } = this.props;
 
         return (
             <div id="main-body">
@@ -12,7 +12,7 @@ class BodyContainer extends Component {
                     categories={categories}
                     changeCategory={changeCategory}
                 />
-                <MainPanel />
+                <MainPanel displayedGroceries={displayedGroceries} />
             </div>
         );
     }

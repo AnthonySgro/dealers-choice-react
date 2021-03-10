@@ -8,12 +8,15 @@ class App extends React.Component {
         super();
         this.state = {
             categories: [],
+            displayedGroceries: [],
         };
         this.changeCategory = this.changeCategory.bind(this);
     }
 
     async changeCategory(category) {
-        console.log(category);
+        this.setState({
+            displayedGroceries: category.Groceries,
+        });
     }
 
     async componentDidMount() {
@@ -24,13 +27,14 @@ class App extends React.Component {
     }
 
     render() {
-        const { categories } = this.state;
+        const { categories, displayedGroceries } = this.state;
 
         return (
             <React.Fragment>
                 <Header />
                 <BodyContainer
                     categories={categories}
+                    displayedGroceries={displayedGroceries}
                     changeCategory={this.changeCategory}
                 />
             </React.Fragment>

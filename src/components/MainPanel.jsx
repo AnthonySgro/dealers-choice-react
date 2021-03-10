@@ -2,18 +2,21 @@ import React, { Component } from "react";
 
 class MainPanel extends Component {
     render() {
+        const { displayedGroceries } = this.props;
         return (
             <div id="main-view">
-                <div className="main-view-item">
-                    <img
-                        src="https://homesteadingfamily.com/wp-content/uploads/2020/01/foodiesfeed.com_fresh-eggs-in-a-grocery-store-500x500.jpg"
-                        alt=""
-                    />
-                    <div className="main-view-item-info">
-                        <p>Eggs</p>
-                        <p>$2.99</p>
+                {displayedGroceries.map((grocery) => (
+                    <div className="main-view-item" key={grocery.id}>
+                        <img
+                            src={grocery.imgUrl}
+                            alt={`Picture of ${grocery.name}`}
+                        />
+                        <div className="main-view-item-info">
+                            <p>{grocery.name}</p>
+                            <p>{`$${grocery.price}`}</p>
+                        </div>
                     </div>
-                </div>
+                ))}
             </div>
         );
     }
