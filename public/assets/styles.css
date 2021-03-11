@@ -92,6 +92,15 @@ a {
     color: black;
 }
 
+#side-panel-list > li {
+    margin: 0.2rem;
+}
+
+#side-panel-list > li > a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
 #main-view {
     display: flex;
     flex-direction: row;

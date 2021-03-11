@@ -9,9 +9,6 @@ class Header extends Component {
                         <a href="/">Patti's Groceries</a>
                     </li>
                     <li className="header-item">
-                        <a href="">Users</a>
-                    </li>
-                    <li className="header-item">
                         <a href="">Inventory</a>
                     </li>
                 </ul>

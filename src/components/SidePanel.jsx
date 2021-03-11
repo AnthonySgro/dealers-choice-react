@@ -11,6 +11,7 @@ class SidePanel extends Component {
                     {categories.map((category) => (
                         <li className="category-list-item" key={category.id}>
                             <a
+                                className="category-list-item-text"
                                 href="#"
                                 onClick={() => changeCategory(category)}
                             >

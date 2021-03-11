@@ -15,6 +15,7 @@ class BodyContainer extends Component {
             deleteGrocery,
             updateGrocery,
             createGrocery,
+            displayNewCategory,
         } = this.props;
 
         return (
@@ -34,6 +35,7 @@ class BodyContainer extends Component {
                     deleteGrocery={deleteGrocery}
                     updateGrocery={updateGrocery}
                     createGrocery={createGrocery}
+                    displayNewCategory={displayNewCategory}
                 />
             </div>
         );

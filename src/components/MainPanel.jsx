@@ -12,6 +12,7 @@ class MainPanel extends Component {
             deleteGrocery,
             updateGrocery,
             createGrocery,
+            displayNewCategory,
         } = this.props;
 
         return (
@@ -91,6 +92,7 @@ class MainPanel extends Component {
                                 <select
                                     name="itemCategory"
                                     id="item-category-select"
+                                    onChange={displayNewCategory}
                                     defaultValue={
                                         detailScreenDefault.Category
                                             ? detailScreenDefault.Category.name
@@ -105,7 +107,17 @@ class MainPanel extends Component {
                                             {category.name}
                                         </option>
                                     ))}
+                                    <option value="newCategory">
+                                        New Category
+                                    </option>
                                 </select>
+                                <input
+                                    style={{ visibility: "hidden" }}
+                                    type="text"
+                                    name="itemNewCategory"
+                                    id="item-new-category"
+                                    placeholder="Create New Category"
+                                />
                             </div>
                             <div
                                 className="item-detail-item"
@@ -115,6 +127,7 @@ class MainPanel extends Component {
                                 <input
                                     type="text"
                                     name="itemImgUrl"
+                                    id="itemImgUrl"
                                     defaultValue={
                                         detailScreenDefault.imgUrl
                                             ? detailScreenDefault.imgUrl
