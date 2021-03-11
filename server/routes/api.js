@@ -26,6 +26,20 @@ router.get("/groceries", async (req, res, next) => {
     }
 });
 
+router.get("/groceries/:id", async (req, res, next) => {
+    try {
+        const grocery = await Grocery.findOne({
+            where: {
+                id: req.params.id,
+            },
+            include: Category,
+        });
+        res.send(grocery);
+    } catch (err) {
+        console.log(err);
+    }
+});
+
 router.get("/users", async (req, res, next) => {
     try {
         const users = await User.findAll({

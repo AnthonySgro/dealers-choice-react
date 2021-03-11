@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class SidePanel extends Component {
     render() {
-        const { categories, changeCategory } = this.props;
+        const { categories, changeCategory, toDetailScreen } = this.props;
 
         return (
             <aside id="side-panel">
@@ -18,6 +18,11 @@ class SidePanel extends Component {
                             </a>
                         </li>
                     ))}
+                    <button>
+                        <a href="#" onClick={() => toDetailScreen()}>
+                            Add New Product
+                        </a>
+                    </button>
                 </ul>
             </aside>
         );

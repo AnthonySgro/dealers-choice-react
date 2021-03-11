@@ -2,6 +2,7 @@ const { Sequelize, DataTypes, Model } = require("sequelize");
 const db = require("./db");
 const User = require("./User");
 const Order = require("./Order");
+
 class Grocery extends Model {}
 
 Grocery.init(

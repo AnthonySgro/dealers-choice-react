@@ -55,56 +55,48 @@
                     </ul>
                 </aside>
                 <div id="main-view">
-                    <div class="main-view-item">
-                        <img
-                            src="https://homesteadingfamily.com/wp-content/uploads/2020/01/foodiesfeed.com_fresh-eggs-in-a-grocery-store-500x500.jpg"
-                            alt=""
-                        />
-                        <div class="main-view-item-info">
-                            <p>Eggs</p>
-                            <p>$2.99</p>
+                    <form action="POST">
+                        <div id="item-detail-view">
+                            <div class="item-detail-item" id="item-name-group">
+                                <label for="item-name">Item Name:</label>
+                                <input
+                                    type="text"
+                                    name="item-name"
+                                    id="item-name"
+                                />
+                            </div>
+                            <div class="item-detail-item" id="item-price-group">
+                                <label for="item-price">Price:</label>
+                                <input
+                                    type="text"
+                                    name="item-price"
+                                    id="item-price"
+                                />
+                            </div>
+                            <div
+                                class="item-detail-item"
+                                id="item-category-group"
+                            >
+                                <label for="item-category">Department:</label>
+                                <select
+                                    name="item-category"
+                                    id="item-category-select"
+                                >
+                                    <option value="produce">produce</option>
+                                </select>
+                            </div>
+                            <div
+                                class="item-detail-item"
+                                id="item-imgurl-group"
+                            >
+                                <label for="item-imgurl">Image URL:</label>
+                                <input type="text" name="item-imgurl" />
+                            </div>
+                            <div class="item-detail-item" id="item-submit">
+                                <button>Submit Changes</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="main-view-item">
-                        <img
-                            src="https://homesteadingfamily.com/wp-content/uploads/2020/01/foodiesfeed.com_fresh-eggs-in-a-grocery-store-500x500.jpg"
-                            alt=""
-                        />
-                        <div class="main-view-item-info">
-                            <p>Eggs</p>
-                            <p>$2.99</p>
-                        </div>
-                    </div>
-                    <div class="main-view-item">
-                        <img
-                            src="https://homesteadingfamily.com/wp-content/uploads/2020/01/foodiesfeed.com_fresh-eggs-in-a-grocery-store-500x500.jpg"
-                            alt=""
-                        />
-                        <div class="main-view-item-info">
-                            <p>Eggs</p>
-                            <p>$2.99</p>
-                        </div>
-                    </div>
-                    <div class="main-view-item">
-                        <img
-                            src="https://homesteadingfamily.com/wp-content/uploads/2020/01/foodiesfeed.com_fresh-eggs-in-a-grocery-store-500x500.jpg"
-                            alt=""
-                        />
-                        <div class="main-view-item-info">
-                            <p>Eggs</p>
-                            <p>$2.99</p>
-                        </div>
-                    </div>
-                    <div class="main-view-item">
-                        <img
-                            src="https://homesteadingfamily.com/wp-content/uploads/2020/01/foodiesfeed.com_fresh-eggs-in-a-grocery-store-500x500.jpg"
-                            alt=""
-                        />
-                        <div class="main-view-item-info">
-                            <p>Eggs</p>
-                            <p>$2.99</p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </main>
